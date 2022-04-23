@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="contenedor">
+        <div class="principal">
+            <div class="top">
+                <!--pausar la musica-->
+                <button id="btnplay" onclick="mute();"><img src="assets/bg/sound.png" width="25" alt="sound play"></button>
+                <p class="descripcion"><strong>Demon Slayer Pixel Fighters</strong>, desarrollado por <strong>Roke</strong>.</p>
+            </div>
+            <div>
+                <h1 class="titulo"> 
+                    Demon Slayer <br>
+                    PIXEL FIGHTERS
+                </h1>
+                <div class="imagenes">
+                    <button class="btnJugar" onclick="window.location.href='juego.html'" >START!</button>
+                    <img class="img1" src="assets/bg/logo.png" width="100" alt="">
+                </div>
+
+            </div>
+            <p class="footer">El juego está basado en la serie de videojuegos de acción-aventura <strong>Demon Slayer</strong>.</p>
+            <img class="img2" src="assets/bg/principal1.png" width="100" alt="">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var sound = new Howl({
+            src: ['assets/music/demonslayer (3).webm'],
+            loop: true,
+            volume: 1.0,
+            onend: function () {
+                console.log('Finished!');
+            }
+           
+        });
+        sound.play()
+        //crear un buton de reproduccion y pausa
+        function btnSound(){
+            if(sound.playing()){
+                sound.pause();
+                document.getElementById("btnplay").innerHTML = "<img src='assets/bg/sound.png' width='25' alt='sound play'>";
+            }else{
+                sound.play();
+                document.getElementById("btnplay").innerHTML = "<img src='assets/bg/sound mute.png' width='25' alt='sound play'>";
+            }
+        }
+        //crear un buton para mutear
+        function mute(){
+            if(sound.mute()){
+                sound.mute(false);
+                document.getElementById("btnplay").innerHTML = "<img src='assets/bg/sound.png' width='25' alt='sound play'>";
+            }else{
+                sound.mute(true);
+                document.getElementById("btnplay").innerHTML = "<img src='assets/bg/sound mute.png' width='25' alt='sound play'>";
+            }
+        }
+    </script>
+</body>
+</html>

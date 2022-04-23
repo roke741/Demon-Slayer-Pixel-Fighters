@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Demon Slayer Pixel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--contenedor de la barra de vidas-->
+    <div class="containerHealth">
+        <!--barra de vidas-->
+        <div class="barHealth">
+            <!--vida jugador-->
+            <div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
+                <div style="background-color: ff0000; height: 32px; width: 100%; transform: skew(23deg);"></div>
+                <div id="vidaJugador" style="position: absolute; height: 32px; background-color: 4caf50; top: 0; bottom: 0; right: 0; width: 100%; transform: skew(23deg);"></div>
+            </div>            
+            <!--temporizador-->
+            <div id="temporizador">
+                10
+            </div>
+            <!--vida enemigo-->
+            <div style="position: relative; height: 30px; width: 100%;">
+                <div style="background-color: #ff0000; height: 32px; transform: skew(-23deg);"></div>
+                <div id="vidaEnemigo" style="position: absolute; height: 32px; background-color: #4caf50; top: 0; bottom: 0; right: 0; left: 0; transform: skew(-23deg);"></div>
+            </div>
+        </div>
+        <div id="background"></div>
+        <div id="textoPantalla"></div>
+
+        <button id="back" onclick="window.location.href='index.html'" ></button>
+
+        <canvas></canvas>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
