@@ -74,7 +74,7 @@
     width: 1024px;
     color: white;
     display: flex;
-    background: url(/assets/bg/bg04.jpg) no-repeat ; /*fixed -> efecto*/
+    background: url(../assets/bg/bg04.jpg) no-repeat ; /*fixed -> efecto*/
 }
 .principal{
     /*display:block;*/
