@@ -82,7 +82,7 @@ const jugador = new Fighter({
             framesMax: 6
         },
         takeHit:{
-            imageSrc: './assets/rengoku/Take Hit-Rk - white silhouette.png',
+            imageSrc: './assets/rengoku/Take-Hit-Rk-white.png',
             framesMax: 4
         },
         death:{
@@ -145,7 +145,7 @@ const enemigo = new Fighter({
             framesMax: 4
         },
         takeHit:{
-            imageSrc: './assets/tanjiro/Take Hit-Tj.png',
+            imageSrc: './assets/tanjiro/Take-hit-Tj.png',
             framesMax: 3
         },
         death:{
